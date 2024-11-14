@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Data
 @AllArgsConstructor
 public class Product {
-    private String prodId;
+    private int prodId;
     private String productName;
     private int price;
 }
