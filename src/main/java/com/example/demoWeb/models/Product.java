@@ -1,19 +1,24 @@
 package com.example.demoWeb.models;
 
-
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
-
+import jakarta.persistence.Entity;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Component
+@Entity
 public class Product {
 
     @Id
-    private int prodId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int  prodId;
     private String productName;
     private int price;
 }
